@@ -277,6 +277,7 @@ function processResources(resources, localResources, remoteResources, pAction) {
 }
 
 async function showResourcesChanges(localYml, remoteYml) {
+  // todo: dengchao: 输出前后变化到控制台
   const diff = jsonDiff.diff(remoteYml, localYml);
 
   const resources = diff.Resources;
