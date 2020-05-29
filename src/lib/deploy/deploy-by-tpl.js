@@ -836,6 +836,7 @@ async function deployByApi(baseDir, tpl, tplPath, context) {
     } else if (resourceType === definition.FLOW_RESOURCE) {
       await deployFlow(resourceName, resourceRes, tpl, context.parameterOverride, baseDir);
     } else {
+      // todo: dengchao: 允许对域名进行单独部署
       throw new Error(`${resourceName} can not be partial deploy`);
     }
     return;
