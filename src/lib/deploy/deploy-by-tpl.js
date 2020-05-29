@@ -848,6 +848,7 @@ async function deployByApi(baseDir, tpl, tplPath, context) {
   await deployLogs(tpl.Resources);
 
   for (const [name, resource] of Object.entries(tpl.Resources)) {
+    // todo: dengchao: equals ignore case
     if (resource.Type === 'Aliyun::Serverless::Service') {
 
       await deployTplService({ baseDir, tplPath,
